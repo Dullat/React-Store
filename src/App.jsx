@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { ThemeContextProvider } from "./context/context";
 import MainLayout from "./layout/MainLayout";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -25,7 +26,11 @@ function App() {
   }, [themeMode]);
 
   const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<MainLayout />}></Route>)
+    createRoutesFromElements(
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    )
   );
   return (
     <ThemeContextProvider value={{ themeMode, setLight, setDark }}>
