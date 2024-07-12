@@ -23,13 +23,13 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <div className="mt-4 p-4 max-w-screen-xl m-auto">
+    <div className="mt-4 p-4 m-auto bg-slate-600">
       <p className="text-3xl font-semibold">Featured Products</p>
       <div className="flex flex-wrap mt-6 gap-4 justify-around">
         {loading ? (
           <div>loading</div>
         ) : (
-          products.map((product, index) => (
+          products.map((product) => (
             <div
               key={product.id}
               className="w-full max-w-72 p-4 bg-white rounded-lg text-black"
