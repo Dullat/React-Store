@@ -8,6 +8,8 @@ import {
 import { ThemeContextProvider } from "./context/context";
 import MainLayout from "./layout/MainLayout";
 import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import Products from "./componants/Products";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -29,6 +31,10 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />}>
+          <Route index element={<Products />} />
+          <Route path="/products/:category" element={<Products />} />
+        </Route>
       </Route>
     )
   );

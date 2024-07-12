@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-700 p-4 text-white mt-4">
+    <div className="bg-slate-700 p-4 text-white mt-4 mt-auto">
       <div className="flex gap-8 h-[50px] items-center">
         <FaFacebook className="fill-white text-2xl" />
         <FaInstagram className="fill-white text-3xl" />
