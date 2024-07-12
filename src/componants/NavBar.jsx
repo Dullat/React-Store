@@ -6,7 +6,7 @@ const NavBar = () => {
   const { themeMode, setDark, setLight } = useTheme();
   console.log("rerender");
   return (
-    <div className="bg-slate-200 flex items-center justify-between h-[50px] select-none px-4 font-medium text-lg dark:bg-slate-700 dark:text-white">
+    <div className="bg-slate-600 flex items-center justify-between h-[50px] select-none px-4 font-medium text-lg dark:bg-slate-700 dark:text-white">
       <div>Logo</div>
       <div className="flex gap-4 items-center">
         <NavLink to="/">Home</NavLink>

@@ -12,7 +12,7 @@ const AboutUs = () => {
         <p className="opacity-70 mt-4 text-sm">
           WE ENSURE YOU GET PRODUCT ON AFFORDABLE PRICE AND GET DELIVERY ON-TIME
         </p>
-        <div className="grid grid-cols-3 gap-4 mt-6 ">
+        <div className="grid grid-cols-3 gap-4 mt-6 text-white">
           <div className="bg-slate-700 aspect-square rounded-full max-w-52 grid content-center w-3/4 m-auto">
             <p className="text-center text-lg font-semibold">ON-Time</p>
           </div>
