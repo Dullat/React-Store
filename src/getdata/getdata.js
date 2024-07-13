@@ -1,7 +1,7 @@
 const getProducts = async (number, categoty = "none", id = undefined) => {
   const limit = `?limit=${number}`;
   let getString = ``;
-  if (categoty === "none") {
+  if (categoty === "none" && id === undefined) {
     getString = limit;
   } else if (id !== undefined) {
     getString = `/${id}`;

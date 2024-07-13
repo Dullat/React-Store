@@ -12,6 +12,8 @@ import ProductsPage from "./pages/ProductsPage";
 import Products from "./componants/Products";
 import ProductPage from "./pages/ProductPage";
 
+let cart = [];
+
 function App() {
   const [themeMode, setThemeMode] = useState("light");
 
@@ -41,7 +43,7 @@ function App() {
     )
   );
   return (
-    <ThemeContextProvider value={{ themeMode, setLight, setDark }}>
+    <ThemeContextProvider value={{ themeMode, setLight, setDark, cart }}>
       <RouterProvider router={router} />
     </ThemeContextProvider>
   );

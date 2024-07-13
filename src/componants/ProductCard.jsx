@@ -1,7 +1,33 @@
 import { Link } from "react-router-dom";
-import { FaPlus, FaEye } from "react-icons/fa";
+import { FaPlus, FaCheck } from "react-icons/fa";
+import useTheme from "../context/context";
+import { useEffect, useState } from "react";
 
 const ProductCard = ({ product }) => {
+  const [inCart, setInCart] = useState(false);
+  const { cart } = useTheme();
+
+  const checkCart = () => {
+    if (cart.includes(product.id)) {
+      setInCart(true);
+    }
+  };
+
+  const handleClick = () => {
+    if (!inCart) {
+      cart.push(product.id);
+      setInCart(true);
+    } else if (inCart === true) {
+      const idIndex = cart.indexOf(product.id);
+      cart.splice(idIndex, 1);
+      setInCart(false);
+    }
+  };
+
+  useEffect(() => {
+    checkCart();
+  }, []);
+
   return (
     <div className="w-full max-w-64 md:max-w-48 flex flex-col xsm:max-w-[80%] p-4 relative bg-white rounded-lg text-black group transition-all overflow-hidden">
       <div
@@ -25,8 +51,15 @@ const ProductCard = ({ product }) => {
           </Link>
         </div>
       </div>
-      <Link className="absolute top-2 right-2 group-hover:scale-110 group-hover:bg-slate-600 translate-x-7 translate-y-[-40px] group-hover:translate-x-0 group-hover:translate-y-0 transition-all p-1 rounded-full cursor-pointer text-white">
-        <FaPlus className="text-lg"></FaPlus>
+      <Link
+        onClick={handleClick}
+        className="absolute top-2 right-2 group-hover:scale-110 group-hover:bg-slate-600 translate-x-7 translate-y-[-40px] group-hover:translate-x-0 group-hover:translate-y-0 transition-all p-1 rounded-full cursor-pointer text-white"
+      >
+        {inCart ? (
+          <FaCheck className="text-lg"></FaCheck>
+        ) : (
+          <FaPlus className="text-lg"></FaPlus>
+        )}
       </Link>
     </div>
   );

@@ -4,6 +4,7 @@ export const ThemeContext = createContext({
   themeMode: "light",
   setDark: () => {},
   setLight: () => {},
+  cart: [],
 });
 
 export const ThemeContextProvider = ThemeContext.Provider;
