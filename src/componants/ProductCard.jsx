@@ -17,7 +17,10 @@ const ProductCard = ({ product }) => {
           <p className="bg-slate-500 w-fit m-auto px-2 rounded-md text-white">
             Rating: {product.rating.rate}
           </p>
-          <Link className="px-2 py-1 bg-blue-700 rounded-md text-white text-center m-auto mt-4 w-full max-w-48 dark:bg-slate-700 ">
+          <Link
+            to={`/product/${product.id}`}
+            className="px-2 py-1 bg-blue-700 rounded-md text-white text-center m-auto mt-4 w-full max-w-48 dark:bg-slate-700 "
+          >
             Check-Out
           </Link>
         </div>

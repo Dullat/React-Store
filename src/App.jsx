@@ -10,6 +10,7 @@ import MainLayout from "./layout/MainLayout";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import Products from "./componants/Products";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -35,6 +36,7 @@ function App() {
           <Route index element={<Products />} />
           <Route path="/products/:category" element={<Products />} />
         </Route>
+        <Route path="/product/:id" element={<ProductPage />} />
       </Route>
     )
   );
