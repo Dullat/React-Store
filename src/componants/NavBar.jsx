@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import useTheme from "../context/context";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaCartPlus } from "react-icons/fa";
 
 const NavBar = () => {
   const { themeMode, setDark, setLight } = useTheme();
@@ -17,6 +17,10 @@ const NavBar = () => {
         ) : (
           <FaSun onClick={setLight} className="cursor-pointer"></FaSun>
         )}
+        <div className="h-[25px] w-[1px] bg-slate-500"></div>
+        <NavLink to="/cart">
+          <FaCartPlus className="cursor-pointer"></FaCartPlus>
+        </NavLink>
       </div>
     </div>
   );

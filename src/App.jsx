@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import Products from "./componants/Products";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 
 let cart = [];
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/products/:category" element={<Products />} />
         </Route>
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
     )
   );
