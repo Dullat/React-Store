@@ -1,7 +1,7 @@
 const TestimonialCard = () => {
   return (
-    <div className="grid  gap-4 mt-6 ">
-      <div className="bg-slate-700 grid w-3/4 min-w-64 m-auto rounded-lg">
+    <div className="grid  gap-4 mt-6 max-w-xl">
+      <div className="bg-slate-700 grid w-3/4 sm:w-full m-auto rounded-lg">
         <div className="grid grid-cols-[25%_75%] p-4 h-fit gap-4">
           <div className="w-full bg-slate-500 aspect-square rounded-full"></div>
           <div className="flex flex-col justify-center">
