@@ -33,14 +33,17 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
+      <Route path="/React-Store" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/products" element={<ProductsPage />}>
+        <Route path="/React-Store/products" element={<ProductsPage />}>
           <Route index element={<Products />} />
-          <Route path="/products/:category" element={<Products />} />
+          <Route
+            path="/React-Store/products/:category"
+            element={<Products />}
+          />
         </Route>
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/React-Store/product/:id" element={<ProductPage />} />
+        <Route path="/React-Store/cart" element={<CartPage />} />
       </Route>
     )
   );
