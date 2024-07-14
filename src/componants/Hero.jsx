@@ -8,7 +8,7 @@ const Hero = () => {
         <h2 className="text-3xl font-semibold">Welcome Bruh</h2>
         <p>Discover wide range of products. Find what you need</p>
         <Link
-          to="/products"
+          to="/React-Store/products"
           className="bg-blue-600 p-2 px-4 w-fit rounded-md mt-8 text-white cursor-pointer dark:bg-white dark:text-black"
         >
           Visit Products

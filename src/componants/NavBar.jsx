@@ -54,10 +54,10 @@ const NavBar = () => {
            }
          aria-hidden={!sidebarVisible} transition-all`}
       >
-        <NavLink to="/" onClick={handleClick}>
+        <NavLink to="/React-Store" onClick={handleClick}>
           Home
         </NavLink>
-        <NavLink to="/products" onClick={handleClick}>
+        <NavLink to="/React-Store/products" onClick={handleClick}>
           Products
         </NavLink>
         <div className="h-[25px] w-[1px] bg-slate-500 sm:hidden"></div>
@@ -75,7 +75,10 @@ const NavBar = () => {
           )}
         </div>
         <div className="h-[25px] w-[1px] bg-slate-500 sm:hidden"></div>
-        <NavLink to="/cart" className="sm:absolute sm:top-4 sm:left-4">
+        <NavLink
+          to="/React-Store/cart"
+          className="sm:absolute sm:top-4 sm:left-4"
+        >
           <FaCartPlus
             className="cursor-pointer"
             onClick={handleClick}

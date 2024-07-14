@@ -44,7 +44,7 @@ const ProductCard = ({ product }) => {
             Rating: {product.rating.rate}
           </p>
           <Link
-            to={`/product/${product.id}`}
+            to={`/React-Store/product/${product.id}`}
             className="px-2 py-1 bg-blue-700 rounded-md text-white text-center m-auto mt-4 w-full max-w-48 dark:bg-slate-700 "
           >
             Check-Out

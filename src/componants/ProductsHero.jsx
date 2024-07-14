@@ -9,25 +9,25 @@ const ProductsHero = () => {
           All
         </NavLink>
         <NavLink
-          to="/products/men's clothing"
+          to="/React-Store/products/men's clothing"
           className="bg-slate-600 px-2 py-1 rounded-md text-white"
         >
           Menware
         </NavLink>
         <NavLink
-          to="/products/women's clothing"
+          to="/React-Store/products/women's clothing"
           className="bg-slate-600 px-2 py-1 rounded-md text-white"
         >
           Women
         </NavLink>
         <NavLink
-          to="/products/jewelery"
+          to="/React-Store/products/jewelery"
           className="bg-slate-600 px-2 py-1 rounded-md text-white"
         >
           Jewelery
         </NavLink>
         <NavLink
-          to="/products/electronics"
+          to="/React-Store/products/electronics"
           className="bg-slate-600 px-2 py-1 rounded-md text-white"
         >
           Elecrons
