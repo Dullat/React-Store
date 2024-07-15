@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="w-full max-w-64 md:max-w-48 flex flex-col xsm:max-w-[80%] p-4 relative bg-white rounded-lg text-black group transition-all overflow-hidden">
       <div
-        className=" w-full aspect-square bg-slate-500 
+        className=" w-full aspect-square bg-slate-500
                   bg-cover m-auto"
         style={{
           backgroundImage: `url(${product.image})`,

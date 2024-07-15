@@ -29,6 +29,7 @@ const ProductPage = () => {
   useEffect(() => {
     const getdata = async () => {
       try {
+        setLoading(true);
         const data = await getProducts(0, "none", id);
         setProduct(data);
         checkCart();

@@ -44,8 +44,8 @@ function App() {
         </Route>
         <Route path="/React-Store/product/:id" element={<ProductPage />} />
         <Route path="/React-Store/cart" element={<CartPage />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
   return (
     <ThemeContextProvider value={{ themeMode, setLight, setDark, cart }}>

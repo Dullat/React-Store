@@ -10,6 +10,7 @@ const Products = () => {
 
   useEffect(() => {
     const getdata = async () => {
+      setLoading(true);
       let cValue = "";
       if (category === undefined) {
         cValue = "none";
@@ -33,7 +34,7 @@ const Products = () => {
   return (
     <div>
       {loading ? (
-        <div> loading</div>
+        <div className="grid place-content-center mt-12"> loading.....</div>
       ) : (
         <div className="flex flex-wrap justify-evenly gap-4 mt-4">
           {products.map((product) => (
