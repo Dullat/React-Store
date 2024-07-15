@@ -16,3 +16,8 @@ The application is currently functional and operational. It allows users to brow
 
 - **Adding More Features**: i plan to add more features like authentication, product search functionality, and checkout process.
 - **GUI Enhancement**: For now i looks good but i plan to make it better
+
+
+### Visit App
+
+[click here](https://dullat.github.io/React-Store)
