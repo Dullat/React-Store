@@ -34,7 +34,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/React-Store" element={<MainLayout />}>
-        <Route index element={<HomePage />} />
+        <Route index path="/React-Store/home" element={<HomePage />} />
         <Route path="/React-Store/products" element={<ProductsPage />}>
           <Route index element={<Products />} />
           <Route
@@ -44,8 +44,8 @@ function App() {
         </Route>
         <Route path="/React-Store/product/:id" element={<ProductPage />} />
         <Route path="/React-Store/cart" element={<CartPage />} />
-      </Route>,
-    ),
+      </Route>
+    )
   );
   return (
     <ThemeContextProvider value={{ themeMode, setLight, setDark, cart }}>

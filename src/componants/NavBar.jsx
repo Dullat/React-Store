@@ -15,6 +15,12 @@ const NavBar = () => {
     setSidebarVisible((prev) => !prev);
   };
 
+  const closeBar = () => {
+    if (sidebarVisible === true) {
+      setSidebarVisible((prev) => !prev);
+    }
+  };
+
   const handleOutsideClick = (e) => {
     if (
       sidebar.current &&
@@ -43,6 +49,10 @@ const NavBar = () => {
     }
   }, [sidebarVisible]);
   console.log("rerender");
+
+  const activeLinkClass = ({ isActive }) => {
+    return isActive ? "text-white" : "";
+  };
   return (
     <div className="bg-slate-600 flex items-center h-[50px] gap-4 select-none px-4 font-medium text-lg dark:bg-slate-700 dark:text-white">
       <div>Logo</div>
@@ -54,10 +64,18 @@ const NavBar = () => {
            }
          aria-hidden={!sidebarVisible} transition-all`}
       >
-        <NavLink to="/React-Store" onClick={handleClick}>
+        <NavLink
+          to="/React-Store/home"
+          className={activeLinkClass}
+          onClick={closeBar}
+        >
           Home
         </NavLink>
-        <NavLink to="/React-Store/products" onClick={handleClick}>
+        <NavLink
+          to="/React-Store/products"
+          className={activeLinkClass}
+          onClick={closeBar}
+        >
           Products
         </NavLink>
         <div className="h-[25px] w-[1px] bg-slate-500 sm:hidden"></div>
