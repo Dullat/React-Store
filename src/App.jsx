@@ -34,7 +34,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/React-Store" element={<MainLayout />}>
-        <Route index path="/React-Store/home" element={<HomePage />} />
+        <Route path="/React-Store/home" element={<HomePage />} />
         <Route path="/React-Store/products" element={<ProductsPage />}>
           <Route index element={<Products />} />
           <Route
