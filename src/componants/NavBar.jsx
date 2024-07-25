@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 const NavBar = () => {
   const { themeMode, setDark, setLight } = useTheme();
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [isGone, setIsGone] = useState(false);
   const sidebar = useRef(null);
   const burgger = useRef(null);
   const darkbtn = useRef(null);
@@ -53,6 +54,16 @@ const NavBar = () => {
   const activeLinkClass = ({ isActive }) => {
     return isActive ? "text-white" : "";
   };
+
+  const gone = () => {
+    closeBar();
+    setIsGone(true);
+  };
+
+  const came = () => {
+    closeBar();
+    setIsGone(false);
+  };
   return (
     <div className="bg-slate-600 flex items-center h-[50px] gap-4 select-none px-4 font-medium text-lg dark:bg-slate-700 dark:text-white">
       <div>Logo</div>
@@ -65,16 +76,18 @@ const NavBar = () => {
          aria-hidden={!sidebarVisible} transition-all`}
       >
         <NavLink
-          to="/React-Store/home"
-          className={activeLinkClass}
-          onClick={closeBar}
+          to="/React-Store/"
+          className={({ isActive }) =>
+            isActive && !isGone ? "text-white" : ""
+          }
+          onClick={came}
         >
           Home
         </NavLink>
         <NavLink
           to="/React-Store/products"
           className={activeLinkClass}
-          onClick={closeBar}
+          onClick={gone}
         >
           Products
         </NavLink>
